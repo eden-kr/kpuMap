@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,251 +9,85 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="90dp"
+        >
+
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:id="@+id/restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:background="#54D7E8"
-            android:src="@drawable/aa"
-            android:scaleType="fitCenter"
-            android:layout_marginRight="2dp"
             android:drawableTop="@drawable/aa"
-            android:layout_weight="1"/>
+            android:scaleType="fitCenter"
+            android:src="@drawable/aa" />
+
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:id="@+id/beer"
-            android:background="#54D7E8"
-            android:src="@drawable/beer"
-            android:scaleType="fitCenter"
-            android:layout_marginRight="2dp"
-
-            android:layout_weight="1"/>
-        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/cafe"
-            android:src="@drawable/cafe"
-            android:scaleType="fitCenter"
+            android:layout_weight="1"
             android:background="#54D7E8"
-            android:layout_weight="1"/>
-    </LinearLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <EditText
-        android:layout_width="380dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:hint=" 검색어를 입력해주세요."
-        android:id="@+id/searchEdit"
-        android:background="@drawable/serachrec"/>
+            android:scaleType="fitCenter"
 
-    <ImageButton
-        android:id="@+id/searchBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/searchEdit"
-        android:layout_alignRight="@id/searchEdit"
-        android:layout_marginTop="23dp"
-        android:layout_marginRight="20dp"
-        android:background="#FFFFFF"
-        android:src="@drawable/ic_search_black_24dp" />
-</RelativeLayout>
+            android:src="@drawable/beer" />
 
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageButton
+            android:id="@+id/cafe"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#54D7E8"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cafe" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        >
+
+        <EditText
+            android:id="@+id/searchEdit"
+            android:layout_width="340dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:layout_marginLeft="20dp"
+            android:padding="20dp"
+            android:textColor="#858485"
+
+            android:background="@drawable/serachrec"
+            android:hint=" 검색어를 입력해주세요." />
+
+        <ImageButton
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/searchEdit"
+            android:layout_alignRight="@id/searchEdit"
+            android:layout_marginTop="23dp"
             android:layout_marginRight="20dp"
-            android:orientation="vertical">
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_search_black_24dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="@drawable/rec"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/choinomi"
-                        android:id="@+id/choinomi"
-                        android:background="#FFFFFF"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitXY"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:textSize="18dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/rectangle"
-                        android:textColor="#FFFFFF"
-                        android:text="   1. 초이노미"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="15dp"
-                        android:text="카레전문점"
-                        android:textSize="12dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="25dp"
-                        android:text="경기도 시흥시 정왕1동 중심상가1길 14 103호"
-                        android:textSize="10dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:textSize="12dp"
-                        android:text="031-319-5222"/>
-                </LinearLayout>
-            </LinearLayout>
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:id="@+id/mapButton"
+            android:layout_toRightOf="@+id/searchEdit"
+            android:layout_alignBottom="@+id/searchEdit"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:scaleType="fitXY"
+            android:src="@drawable/map" />
+    </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rec"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/cham"
-                        android:background="#FFFFFF"
-                        android:id="@+id/cham"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitXY"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:textSize="18dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/rectangle"
-                        android:textColor="#FFFFFF"
-                        android:text="   2. 참나무누룽닭"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="15dp"
-                        android:text="치킨, 닭강정"
-                        android:textSize="12dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="25dp"
-                        android:text="경기 시흥시 중심상가3길 31-1"
-                        android:textSize="10dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:textSize="12dp"
-                        android:text="031-351-1542"/>
-                </LinearLayout>
-            </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/rec"
-                android:orientation="horizontal">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/doshi"
-                        android:background="#FFFFFF"
-                        android:id="@+id/doshi"
-                        android:adjustViewBounds="true"
-                        android:scaleType="fitXY"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:textSize="18dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/rectangle"
-                        android:textColor="#FFFFFF"
-                        android:text="   3. 도시어부"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginLeft="15dp"
-                        android:text="생선회"
-                        android:textSize="12dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginRight="25dp"
-                        android:text="경기 시흥시 중심상가1길 14"
-                        android:textSize="10dp"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="15dp"
-                        android:textSize="12dp"
-                        android:text="031-341-1522"/>
-                </LinearLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainListView"/>
 
 </LinearLayout>

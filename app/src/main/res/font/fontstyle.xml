@@ -12,4 +12,12 @@
         android:fontStyle="normal"
         android:fontWeight="400"
         android:font="@font/bb"/>
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/nanumgothic"/>
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/srgothic"/>
 </font-family>

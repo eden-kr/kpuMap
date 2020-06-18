@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--리스트 뷰 만들기 -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/serachrec"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="30dp"
+    android:padding="10dp">
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:id="@+id/list_picture"
+        android:layout_alignParentLeft="true"
+        android:background="#FFFFFF"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"/>
+    <!-- id : picture-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rectangle"
+        android:textColor="#FFFFFF"
+        android:id="@+id/list_name"
+        android:layout_alignTop="@id/list_picture"
+        android:layout_toRightOf="@id/list_picture" />
+    <!-- id : title 간단한 설명-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/list_title"
+        android:layout_below="@id/list_name"
+        android:layout_toRightOf="@id/list_picture"
+        android:textSize="12dp"/>
+    <!-- id : address-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@id/list_title"
+        android:layout_toRightOf="@id/list_picture"
+        android:id="@+id/list_address"
+        android:layout_marginTop="10dp"
+        android:textSize="10dp"/>
+    <!-- id : call-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:textSize="12dp"
+        android:id="@+id/list_call"
+        android:layout_below="@id/list_address"
+        android:layout_toRightOf="@id/list_picture"
+       />
+
+
+</RelativeLayout>
