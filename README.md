@@ -25,6 +25,7 @@
 Learning Point
 - Log.d로 print의 기능 대체 - tag를 필터링하여 확인
 - 외부DB 사용법
+
 Todo List
 - 리스트뷰에 아이템리스너 생성
 - DetailView에서 ACTION_DIAL 인텐트 넘겨주기
@@ -50,15 +51,19 @@ Learning Point
     import java.io.Serializable;
     open class name (
     ):Serializable{}	- kotlin에서 해결
+    
 TodoList
 - search에서 Toast가 else에서도 뜨는 현상 수정
 - callIcon을 누르면 Action_dial을 가진 인텐트 전달
+
 Reuse
 - DB에 영업시간과 메뉴, 가격 컬럼 추가
 
 20-06-18
 1. 가게 전화 기능 추가
+
 TodoList
 - search에서 Toast가 else에서도 뜨는 현상 수정
+
 Reuse
 - 다이얼로그 형식의 상세 화면을 새로운 액티비티로 전환되도록 수정
