@@ -115,16 +115,16 @@ class DbAdapter {
         var arr = arrayListOf<store>()
         try {
             var c : Cursor = mDb!!.rawQuery("select * from CAFE", null)
-            var b : Cursor = mDb!!.rawQuery("select * from BEER",null)
+            var b : Cursor = mDb!!.rawQuery("select * from BEER", null)
             var r : Cursor = mDb!!.rawQuery("select * from RESTAURANT",null)
             //카페
             c.moveToFirst()
-            Log.d("myTag","커${c.getString(5)}")
             do {
                 var cf = store(
                     c.getString(1), c.getString(2),
                     c.getString(3), c.getString(4),
-                    c.getString(5),c.getString(6)
+                    c.getString(5),c.getString(6),
+                    c.getString(7).toFloat(),c.getString(8).toFloat()
                 )
                 arr.add(cf)
             } while (c.moveToNext())
@@ -134,7 +134,8 @@ class DbAdapter {
                 var beer = store(
                     b.getString(1), b.getString(2),
                     b.getString(3), b.getString(4),
-                    b.getString(5),b.getString(6)
+                    b.getString(5),b.getString(6),
+                    b.getString(7).toFloat(),b.getString(8).toFloat()
                 )
                 arr.add(beer)
             } while (b.moveToNext())
@@ -142,12 +143,33 @@ class DbAdapter {
             r.moveToFirst()
             do {
                 var res = store(
-                    r.getString(4), r.getString(2),
-                    r.getString(1), r.getString(3),
-                    r.getString(5),r.getString(6)
+                    r.getString(4), r.getString(1),
+                    r.getString(2), r.getString(3),
+                    r.getString(5),r.getString(6),
+                    r.getString(7).toFloat(),r.getString(8).toFloat()
                 )
                 arr.add(res)
             } while (r.moveToNext())
+        } catch (e: NullPointerException) {
+        }
+
+        return arr
+    }
+    //카페 데이터 가져오기
+    fun GetImageResource(): ArrayList<ImageResource> {
+
+        var arr = arrayListOf<ImageResource>()
+
+        try {
+            var c : Cursor = mDb!!.rawQuery("select * from IMAGE", null)
+            c.moveToFirst()
+            do {
+                var img = ImageResource(
+                    c.getString(1),c.getString(2)
+                )
+
+                arr.add(img)
+            } while (c.moveToNext())
         } catch (e: NullPointerException) {
         }
 

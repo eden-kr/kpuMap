@@ -31,6 +31,10 @@
         android:background="#54D7E8"
         android:orientation="vertical">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
         <TextView
             android:id="@+id/title_detail"
             android:layout_width="wrap_content"
@@ -42,6 +46,17 @@
             android:layout_marginBottom="8dp"
             android:textColor="#FFFFFF"
             android:textSize="30dp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:id="@+id/bookmark"
+                android:clickable="true"
+                android:src="@drawable/ic_star_black_24dp"/>
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/intro_detail"

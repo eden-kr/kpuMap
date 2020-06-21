@@ -9,85 +9,159 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp"
-        >
+        android:layout_height="240dp"
+        android:orientation="vertical"
+        android:background="#54D7E8"
+        android:layout_marginBottom="20dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/mybookmark"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:id="@+id/getBookmarkList"/>
 
-        <ImageButton
-            android:id="@+id/restaurant"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#54D7E8"
-            android:drawableTop="@drawable/aa"
-            android:scaleType="fitCenter"
-            android:src="@drawable/aa" />
-
-        <ImageButton
-            android:id="@+id/beer"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#54D7E8"
-            android:scaleType="fitCenter"
-
-            android:src="@drawable/beer" />
-
-        <ImageButton
-            android:id="@+id/cafe"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#54D7E8"
-            android:scaleType="fitCenter"
-            android:src="@drawable/cafe" />
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        >
-
-        <EditText
-            android:id="@+id/searchEdit"
-            android:layout_width="340dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:padding="20dp"
-            android:textColor="#858485"
-
-            android:background="@drawable/serachrec"
-            android:hint=" 검색어를 입력해주세요." />
-
-        <ImageButton
-            android:id="@+id/searchBtn"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/searchEdit"
-            android:layout_alignRight="@id/searchEdit"
-            android:layout_marginTop="23dp"
-            android:layout_marginRight="20dp"
-            android:background="#FFFFFF"
-            android:src="@drawable/ic_search_black_24dp" />
-
+            android:fontFamily="@font/srgothic"
+            android:textSize="40dp"
+            android:text="맛 동 산"
+            android:id="@+id/mainName"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#D9FFFFFF"
+            android:layout_centerInParent="true"
+            android:background="#54D7E8"/>
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:clickable="true"
             android:id="@+id/mapButton"
-            android:layout_toRightOf="@+id/searchEdit"
-            android:layout_alignBottom="@+id/searchEdit"
+            android:layout_alignTop="@+id/mainName"
+            android:layout_toRightOf="@+id/mainName"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:scaleType="fitXY"
-            android:src="@drawable/map" />
+            android:src="@drawable/map_remove" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+            <EditText
+                android:id="@+id/searchEdit"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:padding="20dp"
+                android:textColor="#858485"
+                android:gravity="center"
+                android:background="@drawable/serachrec"
+                android:hint=" 검색어를 입력해주세요." />
+            <ImageButton
+                android:id="@+id/searchBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/searchEdit"
+                android:layout_alignRight="@id/searchEdit"
+                android:layout_marginTop="23dp"
+                android:layout_marginRight="20dp"
+                android:background="#FFFFFF"
+                android:src="@drawable/ic_search_black_24dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1">
+        <ImageButton
+            android:id="@+id/restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:background="@drawable/rectangle"
+            android:drawableTop="@drawable/aa"
+            android:scaleType="fitXY"
+            android:src="@drawable/aa" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/srgothic"
+                android:text="음식점"
+                android:textColor="#D9615F5F"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/restaurant"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1">
+        <ImageButton
+            android:id="@+id/beer"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle"
+            android:scaleType="fitXY"
+            android:src="@drawable/beer" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/srgothic"
+            android:layout_marginTop="5dp"
+            android:text="술집"
+            android:textColor="#D9615F5F"
+            android:layout_below="@id/beer"
+            android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1">
+        <ImageButton
+            android:id="@+id/cafe"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle"
+            android:scaleType="fitXY"
+            android:src="@drawable/cafe" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/srgothic"
+                android:textColor="#D9615F5F"
+                android:text="카페"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/cafe"
+                android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    </LinearLayout>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
         android:id="@+id/mainListView"/>
 
 </LinearLayout>

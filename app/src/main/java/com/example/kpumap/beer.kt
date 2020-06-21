@@ -1,5 +1,17 @@
 package com.example.kpumap
+
+import android.app.Application
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import io.realm.Realm
+import io.realm.RealmConfiguration
+import io.realm.RealmObject
+import io.realm.annotations.PrimaryKey
+import java.io.BufferedInputStream
+import java.io.IOException
 import java.io.Serializable
+import java.net.URL
+import java.net.URLConnection
 
 open class beer(
     var id: Int,
@@ -7,7 +19,8 @@ open class beer(
     var beerPlace: String,
     var beerCall: String,
     var beerIntroduce: String
-) :Serializable{}
+
+) : Serializable {}
 
 open class restaurant(
     var id: Int,
@@ -15,7 +28,8 @@ open class restaurant(
     var resCall: String,
     var resIntroduce: String,
     var resName: String
-) :Serializable{}
+
+) : Serializable {}
 
 open class cafe(
     var id: Int,
@@ -23,12 +37,45 @@ open class cafe(
     var cafePlace: String,
     var cafeCall: String,
     var cafeIntroduce: String
-) :Serializable{}
-open class store (
-    var storeName : String,
-    var storePlace : String,
-    var storeCall : String,
-    var storeIntro : String,
-    var storeMenu : String,
-    var storeTime : String
-):Serializable{}
+) : Serializable {}
+
+open class store(
+    var storeName: String,
+    var storePlace: String,
+    var storeCall: String,
+    var storeIntro: String,
+    var storeMenu: String,
+    var storeTime: String,
+    var lat: Float,            //위도
+    var lng: Float
+) : Serializable {}
+
+//이미지이름, 가게명에 따른 url
+open class ImageResource(var imgRssName: String, var imgRss: String) : Serializable {
+    var bitmap: Bitmap? = null
+}
+
+//저장목록에 저장될 data
+open class BookmarkStore(
+    @PrimaryKey var id: Int = 0,
+    var stName: String = "",
+    var stPhonNum: String = "",
+    var stAddress: String = "",
+    var stIntro: String = "",
+    var stImage: Int = 0,
+    var stIsClicked: Boolean = false
+) : RealmObject() {}
+
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        Realm.init(this)
+
+        /*RealmConfiguration config = new RealmConfiguration.Builder()
+        .deleteRealmIfMigrationNeeded()
+        .build();
+
+        Realm.setDefaultConfiguration(config);*/
+    }
+
+}

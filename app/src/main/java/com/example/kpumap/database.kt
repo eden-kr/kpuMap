@@ -18,7 +18,7 @@ class DBHelper : SQLiteOpenHelper {
     //static
     companion object {
         private var DB_PATH: String = "";    //asset내 있으면 공백
-        private var DB_NAME: String = "databaseKpu.db"       //SQLite명
+        private var DB_NAME: String = "kpudb.db"       //SQLite명
         private var mContext: Context? = null
         private var mDatabase: SQLiteDatabase? = null
     }
@@ -51,7 +51,7 @@ class DBHelper : SQLiteOpenHelper {
 
             try {
                 var mInput: InputStream =
-                    assetManager.open("databaseKpu.db", AssetManager.ACCESS_BUFFER)
+                    assetManager.open("kpudb.db", AssetManager.ACCESS_BUFFER)
                 // var mInput: InputStream = mContext!!.assets.open(DB_NAME)
                 var fileName = DB_PATH + DB_NAME
                 var mOutPut = FileOutputStream(fileName)
