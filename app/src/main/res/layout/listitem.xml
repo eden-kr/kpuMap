@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bookmarkdesign"
     android:layout_margin="10dp"
-    android:layout_marginBottom="30dp"
+    android:layout_marginBottom="10dp"
     android:padding="10dp">
     <ImageView
         android:layout_width="200dp"
@@ -20,15 +20,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:textSize="18dp"
-        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/rectangle"
-        android:textColor="#FFFFFF"
+        android:textColor="#54D7E8"
         android:id="@+id/list_name"
-        android:layout_alignTop="@id/list_picture"
         android:layout_toRightOf="@id/list_picture" />
     <!-- id : title 간단한 설명-->
     <TextView
@@ -39,27 +37,29 @@
         android:id="@+id/list_title"
         android:layout_below="@id/list_name"
         android:layout_toRightOf="@id/list_picture"
-        android:textSize="12dp"/>
+        android:textSize="17dp"/>
     <!-- id : address-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="25dp"
         android:layout_below="@id/list_title"
+        android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/list_picture"
         android:id="@+id/list_address"
-        android:layout_marginTop="10dp"
-        android:textSize="10dp"/>
+        android:textColor="#9C9C9C"
+        android:layout_marginTop="3dp"
+        android:textSize="15dp"/>
     <!-- id : call-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="3dp"
         android:layout_marginRight="15dp"
-        android:textSize="12dp"
+        android:textSize="15dp"
         android:id="@+id/list_call"
+        android:textColor="#9C9C9C"
         android:layout_below="@id/list_address"
         android:layout_toRightOf="@id/list_picture"
        />

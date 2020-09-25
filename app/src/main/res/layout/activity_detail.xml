@@ -46,7 +46,6 @@
             android:layout_marginBottom="8dp"
             android:textColor="#FFFFFF"
             android:textSize="30dp" />
-
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
@@ -56,28 +55,45 @@
                 android:id="@+id/bookmark"
                 android:clickable="true"
                 android:src="@drawable/ic_star_black_24dp"/>
+            <TextView
+                android:id="@+id/intro_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/title_detail"
+                android:layout_alignBottom="@id/title_detail"
+                android:fontFamily="@font/srgothic"
+                android:text="카레 전문점"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
         </RelativeLayout>
-
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/intro_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="리뷰 수 :"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/srgothic"
-            android:text="카레 전문점"
-            android:textColor="#FFFFFF"
-            android:textSize="18dp" />
-
-        <TextView
-            android:id="@+id/place_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/srgothic"
-            android:text="경기도 시흥시 정왕1동 중심상가1길 14 103호"
-            android:textColor="#FFFFFF"
-            android:textSize="18dp" />
+            android:id="@+id/t"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text=" 3"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/srgothic"
+                android:id="@+id/review_num"
+                android:layout_alignTop="@+id/t"
+                android:layout_toRightOf="@+id/t"
+                android:layout_marginBottom="15dp"
+                />
+        </RelativeLayout>
     </LinearLayout>
 
     <TextView
@@ -127,20 +143,33 @@
         android:layout_marginTop="15dp"
         android:background="#CFCDD3" />
 
+    <TextView
+        android:id="@+id/place_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/srgothic"
+        android:text="경기도 시흥시 정왕1동 중심상가1길 14 103호"
+        android:textSize="18dp" />
 
-        <TextView
-            android:id="@+id/menu_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:fontFamily="@font/srgothic"
-            android:text="야끼카레(8000)/칼국수(9000)/돼지고기(4000) "
-            android:textSize="18dp" />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="15dp"
+        android:background="#CFCDD3" />
+    <TextView
+        android:id="@+id/menu_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/srgothic"
+        android:text="야끼카레(8000)/칼국수(9000)/돼지고기(4000) "
+        android:textSize="18dp" />
 
 </LinearLayout>
+
 </ScrollView>

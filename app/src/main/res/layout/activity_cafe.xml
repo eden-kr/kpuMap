@@ -31,7 +31,7 @@
             android:layout_marginTop="20dp"
             android:padding="10dp"
             android:textColor="#858485"
-            android:background="@drawable/serachrec"
+            android:background="@drawable/shape"
             android:hint=" 검색어를 입력해주세요." />
 
         <ImageButton
