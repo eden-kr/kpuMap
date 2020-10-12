@@ -2,16 +2,11 @@ package com.example.kpumap
 
 import android.app.Application
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
-import java.io.BufferedInputStream
-import java.io.IOException
 import java.io.Serializable
-import java.net.URL
-import java.net.URLConnection
 
 open class beer(
     var id: Int,
@@ -65,17 +60,30 @@ open class BookmarkStore(
     var stImage: Int = 0,
     var stIsClicked: Boolean = false
 ) : RealmObject() {}
+//리뷰 작성시 사용될 데이터
+open class User(
+    @PrimaryKey var id: Int = 0,
+    var userId: String = "",
+    var password: String = "",
+    var rating: Double = 0.0,
+    var review: String = "",
+    var date: String = "",
+    var stName: String = ""
+) :RealmObject(){}
 
 class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         Realm.init(this)
 
-        /*RealmConfiguration config = new RealmConfiguration.Builder()
+
+/*
+        val  config = RealmConfiguration.Builder()
         .deleteRealmIfMigrationNeeded()
         .build();
 
-        Realm.setDefaultConfiguration(config);*/
+        Realm.setDefaultConfiguration(config);
+*/
     }
 
 }

@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Bitmap
+import android.graphics.Paint
 import android.media.Image
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -30,12 +31,24 @@ class StoreActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        //북마크 클릭 저장
         var f = realm.where(BookmarkStore::class.java).findAll()
         for(i in 0 until f.size){
             if(f[i].stName == this.title_detail.text.toString()){
                 if(f[i].stIsClicked) bookmark.setImageResource(R.drawable.clickedbookmark)
             }
         }
+
+        val count = realm.where(User::class.java).findAll()
+        var cnt = 0
+        if(count != null) {
+            for(i in 0 until count.size) {
+                if(count[i].stName == title_detail.text.toString()) {
+                    cnt++
+                }
+            }
+        }
+        review_num.text = cnt.toString()
     }
     override fun onDestroy() {
         super.onDestroy()
@@ -81,7 +94,14 @@ class StoreActivity : AppCompatActivity() {
                 Delete()
             }
         }
-
+        //리뷰 리스너
+        review_num.setOnClickListener {
+            val intent = Intent(this,ReviewActivity::class.java)
+            val bundle = Bundle()
+            bundle.putSerializable("storeName",title_detail.text.toString())
+            intent.putExtra("bundle",bundle)
+            startActivity(intent)
+        }
 
         //이미지 리스트 출력
         pic1.setOnClickListener {
@@ -167,7 +187,10 @@ class StoreActivity : AppCompatActivity() {
         val detailPlace: TextView = this.findViewById(R.id.place_detail)
         val detailTiming: TextView = this.findViewById(R.id.time_detail)   //영업시간
         val detailMenu: TextView = this.findViewById(R.id.menu_detail)     //메뉴및 가게
+        val detailReview : TextView = this.findViewById(R.id.review_num)
 
+        //밑줄 치기
+        detailReview.paintFlags = Paint.UNDERLINE_TEXT_FLAG
 
         for (i in 0 until storeArr.size - 1) {
             if (storeArr[i].storeName.equals(storeName)) {
